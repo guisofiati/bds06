@@ -34,4 +34,10 @@ public class MovieResource {
 		MovieByIdDTO dto = service.findById(id);
 		return ResponseEntity.ok().body(dto);
 	}
+	
+	@GetMapping(value = "/{id}/reviews")
+	public ResponseEntity<MovieByIdDTO> findReviewsByMovieId(@PathVariable Long id) {
+		MovieByIdDTO dto = service.findReviewsByMovieId(id);
+		return ResponseEntity.ok().body(dto);
+	}
 }

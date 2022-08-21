@@ -28,7 +28,6 @@ public class ResourceExceptionHandler {
 		return ResponseEntity.status(status).body(err);
 	}
 	
-	
 	@ExceptionHandler(MethodArgumentNotValidException.class) 
 	public ResponseEntity<ValidationError> fieldsValidation(MethodArgumentNotValidException e, HttpServletRequest req) {
 		ValidationError err = new ValidationError();
